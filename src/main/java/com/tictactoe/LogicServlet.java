@@ -28,6 +28,9 @@ public class LogicServlet extends HttpServlet {
             return;
         }
 
+        if (checkWin(resp, session, field)) {
+            return;
+        }
         field.getField().put(index, Sign.CROSS);
         if (checkWin(resp, session, field)) {
             return;
